@@ -30,11 +30,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func pause(sender: UIBarButtonItem) {
-        
+        timer.invalidate()
     }
     
     @IBAction func reset(sender: UIBarButtonItem) {
-        
+        timer.invalidate()
+        time = 0
+        timerLabel.text = String(time)
     }
     
     func increaseTimer() {
